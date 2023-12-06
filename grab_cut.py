@@ -82,7 +82,7 @@ for image_file in image_files:
             transparent_roi[:, :, c] = roi[:, :, c] * mask2
         transparent_roi[:, :, 3] = mask2 * 255
 
-        cv2.imwrite(f"out/cropped_{image_file}_{i}.png", transparent_roi)
+        cv2.imwrite(f"grab_cut_out/cropped_{image_file}_{i}.png", transparent_roi)
 
 #cv2.imshow("YOLOv3 Object Detection", image)
 #cv2.waitKey(0)
