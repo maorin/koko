@@ -2,6 +2,10 @@ import cv2
 import numpy as np
 import os
 
+
+
+source_dir = "laplacian_out"
+
 # 加载 YOLOv3 模型
 net = cv2.dnn.readNet("yolo/yolov3.weights", "yolo/yolov3.cfg")
 
@@ -11,7 +15,7 @@ with open("yolo/coco.names", "r") as f:
 
 
 # 读取img目录下的全部文件
-image_files = os.listdir("img")
+image_files = os.listdir(source_dir)
 
 for image_file in image_files:
     # 读取图像
